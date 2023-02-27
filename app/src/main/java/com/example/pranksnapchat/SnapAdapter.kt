@@ -12,10 +12,11 @@ class SnapAdapter(val snapList: List<Snap>) : RecyclerView.Adapter<SnapViewHolde
     }
 
     override fun onBindViewHolder(holder: SnapViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val currentSnap = snapList[position]
+        holder.bindSnap(currentSnap)
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return snapList.size
     }
 }
