@@ -1,5 +1,7 @@
 package com.example.pranksnapchat
 
+
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pranksnapchat.databinding.ListItemLayoutBinding
 
@@ -9,17 +11,18 @@ class SnapViewHolder (val binding: ListItemLayoutBinding):
     private lateinit var currentSnap: Snap
 
     init {
-        binding.root.setOnClickListener { view ->
+        binding.root.setOnClickListener {
             currentSnap.opened = true
             setSnapStatus()
-//            add navigation to PrankSnapFragment
+            val action = R.id.action_mainFragment_to_prankSnapFragment
+//            binding.root.findNavController().navigate(action)
         }
     }
 
     fun bindSnap(snap: Snap){
         currentSnap = snap
         binding.username.text = currentSnap.username
-        binding.time.text = currentSnap.time.toString()
+        binding.time.text = "${currentSnap.time.toString() + "m"}"
         binding.bitmoji.setImageResource(currentSnap.profilePictureResourceID)
         setSnapStatus()
     }

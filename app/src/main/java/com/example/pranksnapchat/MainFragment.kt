@@ -11,9 +11,9 @@ class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
     private val snaps = listOf<Snap>(
-        Snap("1", 12, R.drawable.snap_bitmoji_one, false),
-        Snap("2", 34, R.drawable.bitmoji_two_1, false),
-        Snap("3", 120, R.drawable.bitmoji_three, false)
+        Snap("Jake", 12, R.drawable.snap_bitmoji_one, false),
+        Snap("Jack", 34, R.drawable.bitmoji_two_1, false),
+        Snap("John", 4, R.drawable.bitmoji_three, false)
     )
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
