@@ -15,7 +15,7 @@ class SnapViewHolder (val binding: ListItemLayoutBinding):
             currentSnap.opened = true
             setSnapStatus()
             val action = R.id.action_mainFragment_to_prankSnapFragment
-//            binding.root.findNavController().navigate(action)
+            binding.root.findNavController().navigate(action)
         }
     }
 

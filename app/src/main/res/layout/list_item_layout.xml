@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="username"
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/bitmoji"
@@ -32,10 +32,10 @@
         android:layout_width="104dp"
         android:layout_height="107dp"
         android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739"
         app:srcCompat="@drawable/snap_bitmoji_one" />
 
     <ImageView
@@ -83,11 +83,10 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="100dp"
         android:background="#807F7F"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".15" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
